@@ -1,0 +1,128 @@
+First Question:
+public class CompoundInterestCalculator {
+    public static void main(String[] args) {
+        // Principal amount
+        double p = 1200;
+        // Rate of interest
+        double r = 5.4;
+        // Time span in years
+        double t = 2;
+
+        // Display the calculated compound interest
+        System.out.println("Compound Interest = " + compoundInterest);
+    }
+}
+
+Sec Question:
+public class FactorialCalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        long factorial = calculateFactorial(number);
+
+        System.out.println("Factorial of " + number + " is: " + factorial);
+
+        scanner.close();
+    }
+
+    private static long calculateFactorial(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("Factorial is not defined for negative numbers");
+        }
+
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            return n * calculateFactorial(n - 1);
+        }
+    }
+}
+
+
+Third Q:
+public class SwapDifferent {
+    public static void main(String[] args) {
+        // Declare integer variables
+        int x = 8;
+        int y = 3;
+  
+ 
+        // Display values before the swap
+        System.out.println("Before swapping - X: " + x + ", Y: ");
+
+        // Swap using a temporary variable
+        z = x; // Store the value of x in z
+        x = y; // Assign the value of y to x
+        y = z; // Assign the stored value of x (in z) to y
+
+        // Display the swapped values
+        System.out.println("After swapping - X: " + x + ", Y: " + y);
+    }
+}
+
+4- 
+public class SumSquareDifference {
+    public static void main(String[] args) {
+        int n = 10; // Change this to the desired value of N
+
+        // Calculate the square of the sum
+        double squareOfSum = Math.pow((n * (n + 1) / 2.0), 2);
+
+        // Calculate the sum of the squares
+        double sumOfSquares = (n * (n + 1) * (2 * n + 1)) / 6.0;
+
+        // Calculate the difference
+        double difference = squareOfSum - sumOfSquares;
+
+        // Display the result
+        System.out.println("The difference is: " + difference);
+    }
+}
+
+5- public class FactorPrinter {
+
+    public static void main(String[] args) {
+        // Given number for which factors are to be found
+        int n = 24;
+
+        // Print factors
+        System.out.print("Factors of " + n + ": ");
+        
+        // Loop to find and print factors
+        for (int i = 1; i <= n; i++) {
+            // Check if i is a factor of the given number
+            if (n % i == 0) {
+                // Print the factor
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+
+6- 
+      public static void main(String[] args) {
+            int num1 = 15;
+            int num2 = 25;
+            
+            int gcd = findGCD(num1, num2);
+            int lcm = (num1 * num2) / gcd;
+            
+            System.out.println("GCD of " + num1 + " and " + num2 + " is: " + gcd);
+            System.out.println("LCM of " + num1 + " and " + num2 + " is: " + lcm);
+
+      }
+      
+      // Method to find the Greatest Common Divisor (GCD) using Euclid's Algorithm
+      static int findGCD(int a, int b) {
+        if (b == 0) {
+            return a;
+        } else {
+            return findGCD(b, a % b);
+        }
+        }
+
+}
